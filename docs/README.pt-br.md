@@ -9,7 +9,7 @@ Máquina virtual do analista Kali Linux para análise de segurança do ambiente 
 - [Oracle VirtualBox](https://www.virtualbox.org/) — Plataforma de virtualização;
 - [Kali Linux](https://www.kali.org/get-kali/#kali-platforms) ISO ou Máquina Virtual Pré-configurada;
 
-## Começando
+## Primeiros Passos
 <details>
   <summary>Configuração da Máquina Virtual</summary>
 
@@ -21,4 +21,17 @@ Máquina virtual do analista Kali Linux para análise de segurança do ambiente 
   1. **Adaptador 1** — Externo/Internet (NAT ou Bridge) para plataformas CTF e acesso à internet;
   2. **Adaptador 2** — Rede Interna (homelab) para ambiente de laboratório isolado.
 
+</details>
+
+## Uso
+<details>
+  <summary>Gerenciando a Rede</summary>
+
+  Você pode alternar a conexão de rede marcando ou desmarcando `[ ] Virtual Cable Connection` nas configurações de rede da VM do Kali Linux para cada adaptador.
+
+  - **Acesso à internet:**
+  Habilite a conexão do cabo no Adaptador 1 (Externo/Internet). Usado para desafios CTF em plataformas de estudo online.
+
+  - **Ambiente isolado:**
+  Desabilite a conexão do cabo no Adaptador 1 e habilite o Adaptador 2 (Rede Interna - homelab). Usado para ambiente de laboratório isolado, análise segura de malware ou testes controlados.
 </details>

@@ -22,3 +22,16 @@ Kali Linux analyst virtual machine for security analysis of the homelab environm
   2. **Adapter 2** — Internal Network (homelab) for isolated lab environment.
 
 </details>
+
+## Usage
+<details>
+  <summary>Managing Network</summary>
+
+  You can toggle the network connection by checking or unchecking `[ ] Virtual Cable Connection` in the Kali Linux VM network settings for each adapter.
+
+  - **Internet access:**
+  Enable cable connection on Adapter 1 (External/Internet). Used for CTF challenges on online study platforms.
+
+  - **Isolated environment:**
+  Disable cable connection on Adapter 1 and enable Adapter 2 (Internal Network - homelab). Used for isolated lab environment, safe malware analysis, or controlled testing.
+</details>
