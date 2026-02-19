@@ -35,3 +35,26 @@ Kali Linux analyst virtual machine for security analysis of the homelab environm
   - **Isolated environment:**
   Disable cable connection on Adapter 1 and enable Adapter 2 (Internal Network - homelab). Used for isolated lab environment, safe malware analysis, or controlled testing.
 </details>
+
+<details>
+  <summary>Updating Kali Linux</summary>
+
+  Kali is a rolling release distribution, meaning it receives continuous updates. Keep your system up to date for the latest security patches and features.
+
+  - **System update (rolling release):**
+  Updates the entire system to the latest rolling release version.
+  ```bash
+  sudo apt update && sudo apt full-upgrade -y
+  ```
+  ```bash
+  sudo apt autoremove -y && sudo apt autoclean
+  ```
+
+  - **Package update only:**
+  Updates only installed packages without major system changes.
+```bash
+  sudo apt update && sudo apt upgrade -y
+```
+
+  **Note:** Run system updates regularly, especially before starting security assessments or CTF challenges.
+</details>
