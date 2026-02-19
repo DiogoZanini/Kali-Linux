@@ -27,6 +27,39 @@ Kali Linux analyst virtual machine for security analysis of the homelab environm
 
 </details>
 
+<details>
+  <summary>Installing VirtualBox Guest Additions</summary>
+
+  Guest Additions improves VM performance and enables features like bidirectional clipboard, drag-and-drop, and adaptive screen resolution.
+
+  1. **Insert Guest Additions CD image:**
+  In VirtualBox menu: `Devices > Insert Guest Additions CD image...`
+
+  2. **Install Guest Additions:**
+```bash
+  su
+  bash /media/*/VBoxLinuxAdditions.run
+  # Press Y when prompted
+```
+
+  3. **If installation fails, update kernel and retry:**
+```bash
+  # Remove existing VirtualBox modules
+  lsmod | grep vbox
+  sudo rmmod -f vboxdrv vboxnetflt vboxnetadp
+  
+  # Update system and kernel
+  sudo apt update -y && sudo apt upgrade -y
+  sudo apt install linux-headers-$(uname -r) linux-image-$(uname -r)
+  
+  # Reboot and retry installation
+  sudo reboot
+```
+
+  After reboot, repeat step 2 to install Guest Additions.
+
+</details>
+
 ## Usage
 <details>
   <summary>Managing Network</summary>
@@ -49,8 +82,6 @@ Kali Linux analyst virtual machine for security analysis of the homelab environm
   Updates the entire system to the latest rolling release version.
   ```bash
   sudo apt update && sudo apt full-upgrade -y
-  ```
-  ```bash
   sudo apt autoremove -y && sudo apt autoclean
   ```
 

@@ -24,7 +24,40 @@ Máquina virtual do analista Kali Linux para análise de segurança do ambiente 
   > 💡 **Nota:** Se você estiver usando a imagem Pre-built da VM ao invés de instalar pela ISO, as credenciais padrão são:
   > - Usuário: `kali`
   > - Senha: `kali`
+
+</details>
+
+<details>
+  <summary>Instalando os Adicionais para Convidado do VirtualBox</summary>
+
+  Os Adicionais para Convidado melhoram o desempenho da VM e habilitam recursos como área de transferência bidirecional, arrastar e soltar, e resolução de tela adaptável.
+
+  1. **Inserir imagem de CD dos Adicionais para Convidado:**
+  No menu do VirtualBox: `Dispositivos > Inserir imagem de CD dos Adicionais para Convidado...`
+
+  2. **Instalar os Adicionais para Convidado:**
+```bash
+  su
+  bash /media/*/VBoxLinuxAdditions.run
+  # Pressione Y quando solicitado
+```
+
+  3. **Se a instalação falhar, atualize o kernel e tente novamente:**
+```bash
+  # Remover módulos existentes do VirtualBox
+  lsmod | grep vbox
+  sudo rmmod -f vboxdrv vboxnetflt vboxnetadp
   
+  # Atualizar sistema e kernel
+  sudo apt update -y && sudo apt upgrade -y
+  sudo apt install linux-headers-$(uname -r) linux-image-$(uname -r)
+  
+  # Reiniciar e tentar a instalação novamente
+  sudo reboot
+```
+
+  Após a reinicialização, repita o passo 2 para instalar os Adicionais para Convidado.
+
 </details>
 
 ## Uso
@@ -49,8 +82,6 @@ Máquina virtual do analista Kali Linux para análise de segurança do ambiente 
   Atualiza todo o sistema para a versão rolling release mais recente.
 ```bash
   sudo apt update && sudo apt full-upgrade -y
-```
-```bash
   sudo apt autoremove -y && sudo apt autoclean
 ```
 
