@@ -21,6 +21,10 @@ Kali Linux analyst virtual machine for security analysis of the homelab environm
   1. **Adapter 1** — External/Internet (NAT or Bridged) for CTF platforms and internet access;
   2. **Adapter 2** — Internal Network (homelab) for isolated lab environment.
 
+  > 💡 **Note:** If you're using the Pre-built VM image instead of installing from ISO, the default credentials are:
+  > - Username: `kali`
+  > - Password: `kali`
+
 </details>
 
 ## Usage

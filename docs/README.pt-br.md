@@ -21,6 +21,10 @@ Máquina virtual do analista Kali Linux para análise de segurança do ambiente 
   1. **Adaptador 1** — Externo/Internet (NAT ou Bridge) para plataformas CTF e acesso à internet;
   2. **Adaptador 2** — Rede Interna (homelab) para ambiente de laboratório isolado.
 
+  > 💡 **Nota:** Se você estiver usando a imagem Pre-built da VM ao invés de instalar pela ISO, as credenciais padrão são:
+  > - Usuário: `kali`
+  > - Senha: `kali`
+  
 </details>
 
 ## Uso
