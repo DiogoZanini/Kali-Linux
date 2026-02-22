@@ -1,17 +1,17 @@
-# Kali Linux
+# 🐉 Kali Linux
 Máquina virtual do analista Kali Linux para análise de segurança do ambiente homelab e desafios CTF em plataformas de estudo online.
 
 [**EN-US**](../README.md)
 
 ![Kali Login](./kali_login.png)
 
-## Dependências
+## 📦 Dependências
 - [Oracle VirtualBox](https://www.virtualbox.org/) — Plataforma de virtualização;
 - [Kali Linux](https://www.kali.org/get-kali/#kali-platforms) ISO ou Máquina Virtual Pré-configurada;
 
-## Primeiros Passos
+## 🚀 Primeiros Passos
 <details>
-  <summary>Configuração da Máquina Virtual</summary>
+  <summary>⚙️ Configuração da Máquina Virtual</summary>
 
   - Memória Base: 2048 MB; (adaptável dependendo do uso)
   - Número de CPUs: 2 CPUs; (adaptável dependendo do uso)
@@ -28,7 +28,7 @@ Máquina virtual do analista Kali Linux para análise de segurança do ambiente 
 </details>
 
 <details>
-  <summary>Instalando os Adicionais para Convidado do VirtualBox</summary>
+  <summary>📀 Instalando os Adicionais para Convidado do VirtualBox</summary>
 
   Os Adicionais para Convidado melhoram o desempenho da VM e habilitam recursos como área de transferência bidirecional, arrastar e soltar, e resolução de tela adaptável.
 
@@ -60,9 +60,9 @@ Máquina virtual do analista Kali Linux para análise de segurança do ambiente 
 
 </details>
 
-## Uso
+## 📖 Uso
 <details>
-  <summary>Gerenciando a Rede</summary>
+  <summary>🌐 Gerenciando a Rede</summary>
 
   Você pode alternar a conexão de rede marcando ou desmarcando `[ ] Virtual Cable Connection` nas configurações de rede da VM do Kali Linux para cada adaptador.
 
@@ -74,7 +74,7 @@ Máquina virtual do analista Kali Linux para análise de segurança do ambiente 
 </details>
 
 <details>
-  <summary>Atualizando o Kali Linux</summary>
+  <summary>🔄 Atualizando o Kali Linux</summary>
 
   O Kali é uma distribuição rolling release, o que significa que recebe atualizações contínuas. Mantenha seu sistema atualizado para ter os patches de segurança e recursos mais recentes.
 
@@ -91,5 +91,5 @@ Máquina virtual do analista Kali Linux para análise de segurança do ambiente 
   sudo apt update && sudo apt upgrade -y
 ```
 
-  **Nota:** Execute atualizações do sistema regularmente, especialmente antes de iniciar avaliações de segurança ou desafios CTF.
+  💡 **Nota:** Execute atualizações do sistema regularmente, especialmente antes de iniciar avaliações de segurança ou desafios CTF.
 </details>
